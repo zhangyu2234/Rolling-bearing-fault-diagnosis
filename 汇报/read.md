@@ -1,6 +1,6 @@
 # Distribution-induced Bidirectional Generative Adversarial Network for Graph Representation Learning ([DBGAN](https://arxiv.org/abs/1912.01899))
   For an extended period, I have been focused on reproducing the code from the DBGAN paper. The original code from the paper was written in **TensorFlow** and is based on a very outdated version. Building on this, I have reimplemented the code using **PyTorch**. The main focus of this paper is graph representation learning, which involves mapping data into a low-dimensional space for representation. The entire process is illustrated in the diagram below.
-<img src="/images/DBGAN.png" alt="vis" width="900"/>
+<img src="/images/read.png" alt="vis" width="900"/>
 
 ## My work
 I used the DBGAN proposed in the original paper as an upstream task to learn the features of bearing fault data (based on graph representation learning). For the downstream task, I created a very simple network structure aimed at performing fault diagnosis using the features learned from the upstream task.
