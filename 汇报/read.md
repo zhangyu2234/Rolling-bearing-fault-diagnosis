@@ -8,6 +8,7 @@ I used the DBGAN proposed in the original paper as an upstream task to learn the
 ## Deficiencies
 Due to my limited capabilities, the reproduced code may still contain certain issues, resulting in a final fault diagnosis accuracy of only 90%. Below is the training loss during the DBGAN training process:
 <img src="/images/loss.png" alt="vis" width="900"/>
+
 For the **DBGAN code**, please refer to [DBGAN](optim_wgan.py).You can train DBGAN by running the following commands:
 
 ````
