@@ -1,4 +1,4 @@
-# Distribution-induced Bidirectional Generative Adversarial Network for Graph Representation Learning ([DBGAN](https://arxiv.org/abs/1912.01899))
+# Distribution-induced Bidirectional Generative Adversarial Network for Graph Representation Learning ([GCN-GAN](https://arxiv.org/pdf/1802.04407))
   For an extended period, I have been focused on reproducing the code from the DBGAN paper. The original code from the paper was written in **TensorFlow** and is based on a very outdated version. Building on this, I have reimplemented the code using **PyTorch**. The main focus of this paper is graph representation learning, which involves mapping data into a low-dimensional space for representation. The entire process is illustrated in the diagram below.
 <img src="/images/read.png" alt="vis" width="900"/>
 
