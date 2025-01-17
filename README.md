@@ -258,3 +258,6 @@ avg acc: 0.99, avg f1 score: 0.99
 * SE_Conv https://colab.research.google.com/drive/1vMhpqa8d5PxLOUFXSXE3wIf_lIxSskd1#scrollTo=fPDNYIlG5L7Q
 * CBAM_Conv https://colab.research.google.com/drive/1YStAU2-9Ssp67e6umLwb09_4IDvsx9ay#scrollTo=5r-HAEkICbJO
 * Transformer https://colab.research.google.com/drive/1PocqdgLcfvUD7fOcq_1wCRdGbC_BxA94#scrollTo=3QcHTTvZ7kl7
+
+## 7. Thought
+I’ve been reflecting recently, and I think that for deep learning, it’s easy to write a paper without much effort, but truly getting started and contributing to the field requires us to delve deeply into the theories behind machine learning and deep learning. To this end, I plan to start a new project where I’ll create a 'Deep Learning Theoretical Foundations' document, primarily to develop my own theoretical knowledge. I will include the theories I come across in various deep learning projects, but it might be a bit hard to follow at first, as it won’t be systematically organized. My plan is to write about each theory as I encounter it!
