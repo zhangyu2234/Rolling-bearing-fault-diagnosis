@@ -11,7 +11,8 @@ def dpp_sample(kerner_size):
     eignval = np.maximum(eignval, 0)
 
     for n in range(N):
-        if np.random.random() < eignval[n] / (eignval[n] + 1):
+        prob = eignval[n] / (eignval[n] + 1)
+        if np.random.binomial(n=1, p=prob) == 1:
             J.add(n)
     
     if not J:
