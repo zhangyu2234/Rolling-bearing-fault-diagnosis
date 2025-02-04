@@ -16,6 +16,7 @@ The purpose of creating this repository is to improve my programming skills, whi
 * **2024.10.30**: I've updated two demos, mainly regarding the implementation of GAN and WGAN. You can refer to the files [GAN.py](./Demo_GAN/GAN.py) and [WGAN.py](./Demo_GAN/WGAN_GP.py). The next step is to use GAN for fault classification.
 * **2024.11.21**：Implement fault diagnosis using a combination of **GAN** and **CNN** for upstream and downstream tasks. please refer to [CNN.py](./DBGAN/cnn.py) and [optim_wgan.py](./DBGAN/optim_wgan.py)
 * **2025.2.1**: Updated basic knowledge about **PCA** and **DPP**. please refer to [Deep Learning Theoretical Foundation](./Deep Learning Theoretical Foundation)
+* **2025.2.4**: GNN Coming soon....
   
 The workflow of the entire repository is divided into the following steps:
 ## 1. Data Processing
