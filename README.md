@@ -17,7 +17,7 @@ The purpose of creating this repository is to improve my programming skills, whi
 * **2024.11.21**：Implement fault diagnosis using a combination of **GAN** and **CNN** for upstream and downstream tasks. please refer to [CNN.py](./DBGAN/cnn.py) and [optim_wgan.py](./DBGAN/optim_wgan.py)
 * **2025.2.1**: Updated basic knowledge about **PCA** and **DPP**. please refer to [Deep Learning Theoretical Foundation](./Deep Learning Theoretical Foundation)
 * **2025.2.4**: GNN Coming soon....
-* **2025.2.28**: I have been busy studying DDPM recently. Now I will complete the GNN-based fault diagnosis. **This update is completely implemented from scratch, that is, how to use Euler distance to build an adjacency matrix and how to build GCN from scratch. You will definitely gain something.**All the codes are in the **GNN file**.
+* **2025.2.28**: I have been busy studying DDPM recently. Now I will complete the GNN-based fault diagnosis. **This update is completely implemented from scratch, that is, how to use Euler distance to build an adjacency matrix and how to build GCN from scratch. You will definitely gain something.** All the codes are in the **GNN file**.
   
 The workflow of the entire repository is divided into the following steps:
 ## 1. Data Processing
