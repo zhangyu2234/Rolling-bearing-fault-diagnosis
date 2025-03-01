@@ -116,6 +116,7 @@ def train_GCN(args, model, x, adj, label):
 
         model.eval()
         with torch.no_grad():
+            pred = model(x, adj)
             val_loss = F.nll_loss(pred[valid_idx], label[valid_idx])
             val_acc = valid(pred[valid_idx], label[valid_idx])
 
