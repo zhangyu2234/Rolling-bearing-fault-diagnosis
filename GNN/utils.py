@@ -146,6 +146,57 @@ def train_GCN(args, model, x, adj, label):
     
     print(f'ACC: {acc:.2f}, F1: {f1:.2f}')
 
+# Pyg
+def train_GCNConv(args, model, x, adj, edge_weights, label):
+    epochs = args.epochs
+    lr = args.lr
+    optimizer = torch.optim.Adam(model.parameters(), lr=lr)
+
+    train_idx, valid_idx, test_idx = split_dataset(label)
+    best_val_loss = float('inf')
+    patience = 0
+
+    for epoch in range(epochs):
+        model.train()
+        pred = model(x, adj, edge_weights)
+        train_loss = F.nll_loss(pred[train_idx], label[train_idx])
+        train_acc = valid(pred[train_idx], label[train_idx])
+
+        optimizer.zero_grad()
+        train_loss.backward()
+        optimizer.step()
+
+        model.eval()
+        with torch.no_grad():
+            pred = model(x, adj, edge_weights)
+            val_loss = F.nll_loss(pred[valid_idx], label[valid_idx])
+            val_acc = valid(pred[valid_idx], label[valid_idx])
+
+        
+        if (epoch % 10) == 0:
+            print('train_loss: {:.4f}, train_acc: {:.2f}, val_loss: {:.4f}, val_acc: {:.2f}'.format(train_loss, train_acc, val_loss, val_acc))
+        
+        if val_loss < best_val_loss:
+            best_val_loss = val_loss
+
+            torch.save(model.state_dict(), './GNN/best_model.pth')
+
+        
+        else:
+            patience += 1
+        
+        if patience >= 50:
+            break
+    
+    model.load_state_dict(torch.load('./GNN/best_model.pth'))
+    model.eval()
+    with torch.no_grad():
+        pred = model(x, adj, edge_weights)
+    
+    acc = accuracy_score(label[test_idx].detach().cpu().numpy(), pred[test_idx].detach().cpu().numpy().argmax(axis=-1))
+    f1= f1_score(label[test_idx].detach().cpu().numpy(), pred[test_idx].detach().cpu().numpy().argmax(axis=-1), average='micro')
+    
+    print(f'ACC: {acc:.2f}, F1: {f1:.2f}')
 
 
     
