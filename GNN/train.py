@@ -12,6 +12,8 @@ parser.add_argument('--epochs', type=float, default=200, help='epochs')
 parser.add_argument('--dropout', type=float, default=0.5, help='dropout')
 parser.add_argument('--hidden_channel', type=int, default=256, help='hidden')
 parser.add_argument('--model', type=str, default='GCN', help='model')
+parser.add_argument('--num_heads', type=int, default=4, help='num heads')
+parser.add_argument('--train', type=str, default='GCN', help='Need sparse adj')
 
 args = parser.parse_args()
 
@@ -33,9 +35,17 @@ label = torch.LongTensor(label).cuda()
 adj = torch.FloatTensor(adj)
 
 # Normalize 
-adj = sparse_to_tensor(Normalize(adj)).cuda()
+if args.train == 'GCN':
+    adj = sparse_to_tensor(Normalize(adj)).cuda()
 
-model = GCN(data.shape[1], args.hidden_channel, label.max().item() + 1).cuda()
+elif args.train == 'GAT':
+    adj = sparse_to_tensor(Normalize(adj)).to_dense().cuda()
+
+if args.model == 'GCN':
+    model = GCN(data.shape[1], args.hidden_channel, label.max().item() + 1).cuda()
+
+elif args.model == 'GAT':
+    model = GraphAttentionModel(data.shape[1], args.hidden_channel, label.max().item() + 1, args.num_heads, args.dropout).cuda()
 
 
 if __name__ == '__main__':
