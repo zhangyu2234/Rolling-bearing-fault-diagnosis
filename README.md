@@ -19,7 +19,8 @@ The purpose of creating this repository is to improve my programming skills, whi
 * **2025.2.4**: GNN Coming soon....
 * **2025.2.28**: I have been busy studying DDPM recently. Now I will complete the GNN-based fault diagnosis. **This update is completely implemented from scratch, that is, how to use Euler distance to build an adjacency matrix and how to build GCN from scratch. You will definitely gain something.** All the codes are in the [GNN file](./GNN).
 * **2025.3.1**: I updated the GCN based on the PyG framework, and the fault diagnosis effect is good. Please refer to [GCN_pyg.py](./GNN/GCN_pyg.py) and[train_pyg.py](./GNN/train_pyg.py)
-* **2025.3.3**： I updated the GAT, and the fault diagnosis effect is good. Please refer to [GAT_layer.py](./GNN/GAT_layer.py) and[GAT.py](./GNN/GAT.py)
+* **2025.3.3**: I updated the GAT, and the fault diagnosis effect is good. Please refer to [GAT_layer.py](./GNN/GAT_layer.py) and[GAT.py](./GNN/GAT.py)
+* **2025.3.4**:I updated the GAT based on the PyG framework, and the fault diagnosis effect is good. Please refer to [GCN_pyg.py](./GNN/GCN_pyg.py) and[train_pyg.py](./GNN/train_pyg.py)
   
 The workflow of the entire repository is divided into the following steps:
 ## 1. Data Processing
