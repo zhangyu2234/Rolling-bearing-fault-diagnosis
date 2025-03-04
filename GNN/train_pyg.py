@@ -14,6 +14,7 @@ parser.add_argument('--epochs', type=float, default=200, help='epochs')
 parser.add_argument('--dropout', type=float, default=0.5, help='dropout')
 parser.add_argument('--hidden_channel', type=int, default=256, help='hidden')
 parser.add_argument('--model', type=str, default='GCN', help='model')
+parser.add_argument('--num_heads', type=int, default=4, help='num heads')
 
 args = parser.parse_args()
 
@@ -42,6 +43,7 @@ print(edge_weights)
 data = Data(x=x, edge_index=edge_index, edge_attr=edge_weights)
 
 model = GCN_Pyg(data.x.shape[1], args.hidden_channel, label.max().item() + 1, args.dropout).cuda()
+gat_model = GAT_pyg(data.x.shape[1], args.hidden_channel, label.max().item()+1, args.dropout, args.num_heads).cuda()
 
 if __name__ =='__main__':
     train_GCNConv(args, model, data.x, data.edge_index, data.edge_attr, label)
