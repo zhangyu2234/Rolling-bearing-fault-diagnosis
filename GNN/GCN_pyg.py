@@ -42,7 +42,7 @@ class GAT_pyg(nn.Module):
     def forward(self, x, adj, edge_weights):
 
         x = F.relu(self.layer1(x, adj, edge_weights))
-        print(x.shape)
+        # print(x.shape)
         x = F.dropout(x, p=self.dropout, training=self.training)
         x = self.layer2(x, adj, edge_weights)
         return F.log_softmax(x, dim=-1)
