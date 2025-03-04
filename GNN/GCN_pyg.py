@@ -25,7 +25,27 @@ class GCN_Pyg(nn.Module):
 
         x = self.layer2(x, adj, edge_weights)
         return F.log_softmax(x, dim=-1)
+
+
+class GAT_pyg(nn.Module):
+    def __init__(self, in_channel, hidden, out_channel, dropout, heads):
+        super(GAT_pyg, self).__init__()
+
+        self.in_channel = in_channel
+        self.hidden = hidden
+        self.out_channel = out_channel
+        self.dropout = dropout
+
+        self.layer1 = GATConv(in_channel, hidden, heads)
+        self.layer2 = GATConv(hidden*heads, out_channel, heads)
     
+    def forward(self, x, adj, edge_weights):
+
+        x = F.relu(self.layer1(x, adj, edge_weights))
+        print(x.shape)
+        x = F.dropout(x, p=self.dropout, training=self.training)
+        x = self.layer2(x, adj, edge_weights)
+        return F.log_softmax(x, dim=-1)
 
     
 
