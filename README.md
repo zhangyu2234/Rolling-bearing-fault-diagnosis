@@ -21,6 +21,7 @@ The purpose of creating this repository is to improve my programming skills, whi
 * **2025.3.1**: I updated the GCN based on the PyG framework, and the fault diagnosis effect is good. Please refer to [GCN_pyg.py](./GNN/GCN_pyg.py) and[train_pyg.py](./GNN/train_pyg.py)
 * **2025.3.3**: I updated the GAT, and the fault diagnosis effect is good. Please refer to [GAT_layer.py](./GNN/GAT_layer.py) and[GAT.py](./GNN/GAT.py)
 * **2025.3.4**:I updated the GAT based on the PyG framework, and the fault diagnosis effect is good. Please refer to [GCN_pyg.py](./GNN/GCN_pyg.py) and[train_pyg.py](./GNN/train_pyg.py)
+* **2025.3.23**:Today I finally connected Fourier transform with GCN. I updated the pdf and some visualization codes in the file[GCN_filter.py](./Deep Learning Theoretical Foundation/GCN_filter.py).
   
 The workflow of the entire repository is divided into the following steps:
 ## 1. Data Processing
@@ -267,3 +268,5 @@ avg acc: 0.99, avg f1 score: 0.99
 
 ## 7. Thought
 I’ve been reflecting recently, and I think that for deep learning, it’s easy to write a paper without much effort, but truly getting started and contributing to the field requires us to delve deeply into the theories behind machine learning and deep learning. To this end, I plan to start a new project where I’ll create a 'Deep Learning Theoretical Foundations' document, primarily to develop my own theoretical knowledge. I will include the theories I come across in various deep learning projects, but it might be a bit hard to follow at first, as it won’t be systematically organized. My plan is to write about each theory as I encounter it!
+
+
