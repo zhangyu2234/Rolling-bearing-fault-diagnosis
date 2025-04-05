@@ -42,9 +42,6 @@ python data.py
 * GAN Applications in Falut Diagnosis: [GAN](./md/GAN.md) and [GAN+CNN](./DBGAN/read.md)
 * GCN Applications in Fault Diagnosis: [GCN](./md/GCN.md)
 * HyperGraph Applications in Fault Diagnosis: [HyperGraph](./md/HyperGraph.md)
-* Diffusion Model Applications in Fault Diagnosis: [Diffusion](./md/Diffusion.md)
-* Application of KAN in model: [KAN](./md/KAN.md)
-
 
 ## 3. train
 You can execute the following command to perform the training, testing, and validation of the network:
