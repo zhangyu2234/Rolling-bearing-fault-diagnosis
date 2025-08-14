@@ -22,7 +22,7 @@ The purpose of creating this repository is to improve my programming skills, whi
 * **2025.3.3**: I updated the GAT, and the fault diagnosis effect is good. Please refer to [GAT_layer.py](./GNN/GAT_layer.py) and[GAT.py](./GNN/GAT.py)
 * **2025.3.4**:I updated the GAT based on the PyG framework, and the fault diagnosis effect is good. Please refer to [GCN_pyg.py](./GNN/GCN_pyg.py) and[train_pyg.py](./GNN/train_pyg.py)
 * **2025.3.23**:Today I finally connected Fourier transform with GCN. I updated the pdf and some visualization codes in the file[GCN_filter.py](./Deep Learning Theoretical Foundation/GCN_filter.py).
-* **2025.4.8**:Updated the prediction of the remaining service life of the bearing. The current effect is average and is for reference only. Wait for me to debug it later.[RUL](./RUL)
+
   
 The workflow of the entire repository is divided into the following steps:
 ## 1. Data Processing
